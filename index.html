@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bận hay Lười? — Chẩn đoán trạng thái trong 60 giây</title>
+<meta name="description" content="Ứng dụng mobile giúp bạn phân biệt kiệt sức thật sự và procrastination chỉ trong 60 giây. Dành cho sinh viên và người trẻ đi làm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Điều hướng chính">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Bận hay Lười? — Trang chủ">
+      <span class="nav-emoji" aria-hidden="true">🤔</span>
+      <span class="nav-name">Bận hay Lười?</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Tính năng</a>
+      <a href="#screens">Màn hình</a>
+      <a href="#users">Đối tượng</a>
+      <div class="nav-sep" aria-hidden="true"></div>
+      <a href="https://www.figma.com/design/s4eJpHFbCJIEIy4n81feyz/energy-app?node-id=13605-13323&t=JeQHbb51WVs3npWu-1" target="_blank" rel="noopener noreferrer" class="nav-btn-outline">Figma →</a>
+      <a href="https://www.behance.net/gallery/247647925/Energy-App" target="_blank" rel="noopener noreferrer" class="nav-btn-filled">Behance →</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#features">Tính năng</a>
+    <a href="#screens">Màn hình</a>
+    <a href="#users">Đối tượng</a>
+    <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">Xem Figma →</a>
+    <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Xem Behance →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-label="Giới thiệu ứng dụng">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+    <div class="hero-orb orb3"></div>
+    <div class="grid-lines"></div>
+    <div class="hero-noise"></div>
+  </div>
+
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="hero-badge animate-in" style="--delay:0s">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Đồ án môn Mobile App Development
+      </div>
+
+      <h1 class="hero-title animate-in" style="--delay:0.08s">
+        Bận thật<br>
+        <em class="title-grad">hay chỉ lười?</em>
+      </h1>
+
+      <p class="hero-sub animate-in" style="--delay:0.18s">
+        Ứng dụng chẩn đoán trạng thái trong <strong>60 giây</strong> — biết ngay nên tiếp tục hay cần nghỉ. Không cần internet, không cần đăng ký.
+      </p>
+
+      <div class="hero-stats animate-in" style="--delay:0.28s" role="list" aria-label="Thống kê">
+        <div class="stat" role="listitem"><div class="stat-num">10</div><div class="stat-label">câu hỏi</div></div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem"><div class="stat-num">60s</div><div class="stat-label">kết quả</div></div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem"><div class="stat-num">6</div><div class="stat-label">trạng thái</div></div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem"><div class="stat-num">0</div><div class="stat-label">cần internet</div></div>
+      </div>
+
+      <div class="hero-ctas animate-in" style="--delay:0.36s">
+        <a href="https://www.figma.com/design/s4eJpHFbCJIEIy4n81feyz/energy-app?node-id=13605-13323&t=JeQHbb51WVs3npWu-1" target="_blank" rel="noopener noreferrer" class="cta-primary">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="1.5" fill="white" fill-opacity=".9"/><rect x="10" y="2" width="6" height="6" rx="3" fill="white" fill-opacity=".9"/><rect x="2" y="10" width="6" height="6" rx="3" fill="white" fill-opacity=".9"/><rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" fill-opacity=".9"/></svg>
+          Xem thiết kế Figma
+        </a>
+        <a href="https://www.behance.net/gallery/247647925/Energy-App" target="_blank" rel="noopener noreferrer" class="cta-secondary">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4h5.5C9.43 4 11 5.34 11 7c0 1-.5 1.8-1.3 2.3C10.9 9.7 12 10.7 12 12c0 2-1.8 3-3.5 3H2V4zm2 4.5h3c.83 0 1.5-.67 1.5-1.5S7.83 5.5 7 5.5H4v3zm0 4.5h3.5c.83 0 1.5-.67 1.5-1.5S8.33 11.5 7.5 11.5H4V13z" fill="currentColor"/><path d="M11.5 7h5M13 4.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="14.5" cy="11" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M12 11h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Case study Behance
+        </a>
+      </div>
+
+      <div class="scroll-hint animate-in" style="--delay:0.6s" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Cuộn xuống</span>
+      </div>
+    </div>
+
+    <!-- Phone mockup -->
+    <div class="hero-mockup animate-in" style="--delay:0.2s" role="img" aria-label="Minh họa giao diện ứng dụng">
+      <div class="mockup-glow" aria-hidden="true"></div>
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <img 
+            src="images/screen-splash.PNG" 
+            alt="Màn hình chính ứng dụng Bận hay Lười?" 
+            class="phone-img"
+          >
+          <!-- <div class="mini-screen home-mini active">
+            <div class="ms-header">
+              <div>
+                <div class="ms-sub">THỨ SÁU, 22:14</div>
+                <div class="ms-title">Xin chào 👋</div>
+              </div>
+              <div class="ms-avatar" aria-hidden="true">BL</div>
+            </div>
+            <div class="ms-card green-card">
+              <div class="ms-card-icon" aria-hidden="true">✅</div>
+              <div>
+                <div class="ms-card-state">Tỉnh táo, sẵn sàng</div>
+                <div class="ms-card-time">hôm nay · 14:32</div>
+              </div>
+              <div class="ms-score">4.2<span>/5</span></div>
+            </div>
+            <div class="ms-cta">⚡ Bắt đầu kiểm tra ngay</div>
+            <div class="ms-chips">
+              <div class="ms-chip red">😵 Kiệt</div>
+              <div class="ms-chip orange">😴 Mệt</div>
+              <div class="ms-chip green">✅ Sẵn</div>
+              <div class="ms-chip blue">🎯 Tập</div>
+              <div class="ms-chip purple">😶 ĐL</div>
+              <div class="ms-chip yellow">😬 Lười</div>
+            </div>
+          </div> -->
+        </div>
+        <div class="phone-shine" aria-hidden="true"></div>
+      </div>
+
+      <div class="float-card fc1" aria-hidden="true">
+        <div class="fc-emoji">⚡</div>
+        <div>
+          <div class="fc-label">Năng lượng</div>
+          <div class="fc-bar"><div class="fc-fill" style="width:82%;background:#FFD600"></div></div>
+        </div>
+        <div class="fc-pct" style="color:#FFD600">82%</div>
+      </div>
+
+      <div class="float-card fc2" aria-hidden="true">
+        <div class="fc-badge" style="background:rgba(6,214,160,.15);border-color:rgba(6,214,160,.3);color:#06D6A0">✅ Sẵn sàng</div>
+        <div class="fc-score">4.2<span style="font-size:11px;color:#555570">/5</span></div>
+      </div>
+
+      <div class="float-card fc3" aria-hidden="true">
+        <div class="fc-emoji">⏱️</div>
+        <div class="fc-label" style="font-size:10px;">Hoàn thành trong</div>
+        <div class="fc-time">47 giây</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem" aria-labelledby="problem-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">VẤN ĐỀ</div>
+    <h2 class="section-title" id="problem-h">Bạn có thường xuyên<br>tự hỏi không?</h2>
+
+    <div class="problem-grid">
+      <article class="problem-card pc-bad animate-scroll">
+        <div class="problem-icon" aria-hidden="true"></div>
+        <h3>"Mình có đang thực sự kiệt sức không, hay chỉ lười biếng?"</h3>
+        <p>Ranh giới giữa cần nghỉ ngơi và trốn tránh trách nhiệm rất mờ nhạt — và hầu hết mọi người không biết mình đang ở đâu.</p>
+      </article>
+      <article class="problem-card pc-bad animate-scroll" style="--sd:0.1s">
+        <div class="problem-icon" aria-hidden="true"></div>
+        <h3>Cố gắng khi kiệt sức thật</h3>
+        <p>Dẫn đến burnout, stress mãn tính, giảm năng suất dài hạn. Thầm lặng tàn phá sức khỏe tinh thần.</p>
+      </article>
+      <article class="problem-card pc-bad animate-scroll" style="--sd:0.2s">
+        <div class="problem-icon" aria-hidden="true"></div>
+        <h3>Buông bỏ khi chỉ đang lười</h3>
+        <p>Deadline trễ, cảm giác tội lỗi, tự ti về bản thân. Vòng lặp tiêu cực ngày càng khó thoát ra.</p>
+      </article>
+    </div>
+
+    <div class="problem-arrow" aria-hidden="true">
+      <div class="arrow-line"></div>
+      <div class="arrow-text">Giải pháp của chúng tôi</div>
+      <div class="arrow-line"></div>
+    </div>
+
+    <div class="solution-block animate-scroll">
+      <div class="sol-icon" aria-hidden="true">🤔</div>
+      <div class="sol-content">
+        <h3>Một công cụ khách quan, nhanh và không cần internet</h3>
+        <p>10 câu hỏi được thiết kế khoa học về năng lượng, giấc ngủ, deadline, tâm lý và môi trường → thuật toán rule-based → kết quả và gợi ý hành động cụ thể trong dưới 60 giây.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UVP -->
+<section class="uvp" id="uvp" aria-labelledby="uvp-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">GIÁ TRỊ CỐT LÕI</div>
+    <h2 class="section-title" id="uvp-h">Khác gì ChatGPT<br>hay app todo list?</h2>
+
+    <div class="uvp-grid">
+      <article class="uvp-card animate-scroll">
+        <div class="uvp-icon" style="background:rgba(108,71,255,.12);color:#9c76ff" aria-hidden="true">⚡</div>
+        <h4>Dưới 60 giây</h4>
+        <p>Nhanh hơn việc gõ câu hỏi vào ChatGPT. Kết quả ngay, không chờ đợi, không phân tích dài dòng.</p>
+        <div class="uvp-tag">vs. ChatGPT: 3–5 phút</div>
+      </article>
+      <article class="uvp-card animate-scroll" style="--sd:0.08s">
+        <div class="uvp-icon" style="background:rgba(6,214,160,.12);color:#06D6A0" aria-hidden="true">👆</div>
+        <h4>Không cần gõ phím</h4>
+        <p>Tap để chọn đáp án. Thiết kế cho người đang mệt hoặc thiếu động lực — không cần gõ một chữ nào.</p>
+        <div class="uvp-tag">vs. Pomodoro app: phải tự set up</div>
+      </article>
+      <article class="uvp-card animate-scroll" style="--sd:0.16s">
+        <div class="uvp-icon" style="background:rgba(41,182,246,.12);color:#29B6F6" aria-hidden="true">📡</div>
+        <h4>Hoạt động offline</h4>
+        <p>Toàn bộ tính năng hoạt động không cần mạng. Dữ liệu lưu local, bảo mật tuyệt đối, không upload gì cả.</p>
+        <div class="uvp-tag">vs. Mọi AI app: cần internet</div>
+      </article>
+      <article class="uvp-card animate-scroll" style="--sd:0.24s">
+        <div class="uvp-icon" style="background:rgba(255,167,38,.12);color:#FFA726" aria-hidden="true">🎯</div>
+        <h4>Một câu hỏi duy nhất</h4>
+        <p>App tập trung vào đúng 1 vấn đề: "Nên làm việc hay nghỉ ngay lúc này?" — không phân tán vào to-do, habit, hay calendar.</p>
+        <div class="uvp-tag">Focus beats feature bloat</div>
+      </article>
+      <article class="uvp-card animate-scroll" style="--sd:0.32s">
+        <div class="uvp-icon" style="background:rgba(255,214,0,.12);color:#FFD600" aria-hidden="true">😂</div>
+        <h4>Tone Gen Z, không giáo điều</h4>
+        <p>Ngôn ngữ thân thiện, hài hước, đồng cảm. Không phán xét, không thuyết giáo. App như người bạn hiểu bạn.</p>
+        <div class="uvp-tag">Relatable, not preachy</div>
+      </article>
+      <article class="uvp-card animate-scroll" style="--sd:0.40s">
+        <div class="uvp-icon" style="background:rgba(156,118,255,.12);color:#9c76ff" aria-hidden="true">📊</div>
+        <h4>6 trạng thái chi tiết</h4>
+        <p>Không chỉ "mệt" hay "ổn" — phân loại thành 6 trạng thái với gợi ý hành động cụ thể cho từng tình huống.</p>
+        <div class="uvp-tag">Granular diagnosis</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features" aria-labelledby="features-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">TÍNH NĂNG MVP</div>
+    <h2 class="section-title" id="features-h">Những gì app<br>thực sự làm được</h2>
+
+    <div class="features-layout">
+      <div class="features-list">
+        <div class="feature-item animate-scroll active" data-screen="0" tabindex="0" role="button" aria-pressed="true">
+          <div class="feature-num" aria-hidden="true">01</div>
+          <div class="feature-content">
+            <h4>Bảng câu hỏi thông minh</h4>
+            <p>10–12 câu hỏi tap-to-select bao gồm 4 nhóm: Năng lượng &amp; Sức khỏe, Công việc &amp; Deadline, Tâm lý, Môi trường. Mỗi câu có 4–5 lựa chọn với mô tả ngắn.</p>
+            <div class="feature-tags"><span>4 nhóm chủ đề</span><span>Không cần gõ</span><span>Auto-advance</span></div>
+          </div>
+        </div>
+        <div class="feature-item animate-scroll" data-screen="1" tabindex="0" role="button" aria-pressed="false" style="--sd:0.1s">
+          <div class="feature-num" aria-hidden="true">02</div>
+          <div class="feature-content">
+            <h4>Thuật toán rule-based</h4>
+            <p>Điểm số được tính theo trọng số (weighted scoring) từ 4 nhóm → phân loại vào 1 trong 6 trạng thái. Minh bạch, giải thích được, không phải hộp đen AI.</p>
+            <div class="feature-tags"><span>Weighted scoring</span><span>6 trạng thái</span><span>Explainable</span></div>
+          </div>
+        </div>
+        <div class="feature-item animate-scroll" data-screen="2" tabindex="0" role="button" aria-pressed="false" style="--sd:0.2s">
+          <div class="feature-num" aria-hidden="true">03</div>
+          <div class="feature-content">
+            <h4>Kết quả &amp; gợi ý hành động</h4>
+            <p>Màn hình kết quả hiện trạng thái, điểm tổng, breakdown 4 nhóm dạng bar chart và 3 gợi ý hành động cụ thể — không chung chung, không mơ hồ.</p>
+            <div class="feature-tags"><span>Bar chart breakdown</span><span>3 gợi ý cụ thể</span><span>Tone hài hước</span></div>
+          </div>
+        </div>
+        <div class="feature-item animate-scroll" data-screen="3" tabindex="0" role="button" aria-pressed="false" style="--sd:0.3s">
+          <div class="feature-num" aria-hidden="true">04</div>
+          <div class="feature-content">
+            <h4>Lịch sử &amp; nhắc nhở</h4>
+            <p>Xem lại các lần kiểm tra trước, nhận ra pattern của bản thân. Đặt nhắc nhở mỗi tối để check-in thường xuyên hơn.</p>
+            <div class="feature-tags"><span>Lưu offline</span><span>Timeline view</span><span>Smart reminder</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-phone animate-scroll" style="--sd:0.1s" role="img" aria-label="Minh họa màn hình tính năng">
+        <div class="phone-frame phone-sm">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen" id="featureScreen">
+            <img src="images/screen-quiz.PNG"    alt="Màn hình câu hỏi"    class="phone-img feature-img active" id="fs0">
+            <img src="images/screen-results.PNG"  alt="Màn hình kết quả"    class="phone-img feature-img" id="fs1">
+            <img src="images/screen-history.PNG" alt="Màn hình lịch sử"    class="phone-img feature-img" id="fs2">
+            <img src="images/screen-settings.PNG" alt="Màn hình cài đặt"  class="phone-img feature-img" id="fs3">
+            <!-- <div class="mini-screen quiz-mini active" id="fs0">
+              <div class="ms-progress-row">
+                <span class="ms-prog-count">3 / 10</span>
+                <span class="ms-prog-pct">30%</span>
+              </div>
+              <div class="ms-progress-bar"><div class="ms-progress-fill"></div></div>
+              <div class="ms-group-badge">⚡ Năng lượng &amp; Sức khỏe</div>
+              <div class="ms-question">Mức năng lượng của bạn lúc này?</div>
+              <div class="ms-options">
+                <div class="ms-opt">😵 <span>Kiệt sức hoàn toàn</span></div>
+                <div class="ms-opt">😴 <span>Khá mệt</span></div>
+                <div class="ms-opt selected">😐 <span>Bình thường</span></div>
+                <div class="ms-opt">🙂 <span>Khá tốt</span></div>
+                <div class="ms-opt">🔥 <span>Tràn đầy năng lượng</span></div>
+              </div>
+            </div> -->
+            <!-- <div class="mini-screen result-mini" id="fs1">
+              <div class="ms-result-card">
+                <div class="ms-result-emoji">✅</div>
+                <div>
+                  <div class="ms-result-state">Tỉnh táo, sẵn sàng</div>
+                  <div class="ms-result-sub">Trạng thái tốt để làm việc</div>
+                </div>
+                <div class="ms-result-score">4.2<span>/5</span></div>
+              </div>
+              <div class="ms-bars">
+                <div class="ms-bar-row"><span>⚡ Năng lượng</span><div class="ms-bt"><div style="width:82%;background:#FFD600" class="ms-bf"></div></div><span style="color:#FFD600">82%</span></div>
+                <div class="ms-bar-row"><span>📋 Công việc</span><div class="ms-bt"><div style="width:75%;background:#FFA726" class="ms-bf"></div></div><span style="color:#FFA726">75%</span></div>
+                <div class="ms-bar-row"><span>💭 Tâm lý</span><div class="ms-bt"><div style="width:68%;background:#9c76ff" class="ms-bf"></div></div><span style="color:#9c76ff">68%</span></div>
+                <div class="ms-bar-row"><span>🌍 Môi trường</span><div class="ms-bt"><div style="width:78%;background:#06D6A0" class="ms-bf"></div></div><span style="color:#06D6A0">78%</span></div>
+              </div>
+              <div class="ms-suggests">
+                <div class="ms-sug"><span class="ms-sug-n">1</span>Bắt đầu với task quan trọng nhất</div>
+                <div class="ms-sug"><span class="ms-sug-n">2</span>Tắt thông báo, focus 25 phút</div>
+              </div>
+            </div> -->
+            <!-- <div class="mini-screen hist-mini" id="fs2">
+              <div class="ms-hist-header">Lịch sử</div>
+              <div class="ms-day-label">Hôm nay</div>
+              <div class="ms-hist-item"><div class="ms-hd green-d"></div><div><div class="ms-hs">Tỉnh táo, sẵn sàng</div><div class="ms-ht">14:32</div></div><div class="ms-hb green-b">✅</div></div>
+              <div class="ms-hist-item"><div class="ms-hd orange-d"></div><div><div class="ms-hs">Mệt mỏi nhẹ</div><div class="ms-ht">08:15</div></div><div class="ms-hb orange-b">😴</div></div>
+              <div class="ms-day-label">Hôm qua</div>
+              <div class="ms-hist-item"><div class="ms-hd red-d"></div><div><div class="ms-hs">Kiệt sức hoàn toàn</div><div class="ms-ht">23:10</div></div><div class="ms-hb red-b">😵</div></div>
+              <div class="ms-hist-item"><div class="ms-hd blue-d"></div><div><div class="ms-hs">Tập trung cao độ</div><div class="ms-ht">15:45</div></div><div class="ms-hb blue-b">🎯</div></div>
+            </div> -->
+            <!-- <div class="mini-screen sett-mini" id="fs3">
+              <div class="ms-sett-header">
+                <div class="ms-app-logo">🤔</div>
+                <div><div class="ms-app-name">Bận hay Lười?</div><div class="ms-app-ver">v2.0.0</div></div>
+              </div>
+              <div class="ms-sett-group">
+                <div class="ms-sett-label">HIỂN THỊ</div>
+                <div class="ms-sett-row"><div class="ms-si" style="background:rgba(108,71,255,.1)">🌙</div><span>Giao diện tối</span><div class="ms-tog on"></div></div>
+                <div class="ms-sett-row"><div class="ms-si" style="background:rgba(41,182,246,.1)">🌏</div><span>Ngôn ngữ</span><span class="ms-val">Tiếng Việt</span></div>
+                <div class="ms-sett-row"><div class="ms-si" style="background:rgba(255,214,0,.1)">🔔</div><span>Nhắc nhở</span><span class="ms-val">22:00</span></div>
+              </div>
+              <div class="ms-sett-group">
+                <div class="ms-sett-label">DỮ LIỆU</div>
+                <div class="ms-sett-row"><div class="ms-si" style="background:rgba(6,214,160,.1)">📤</div><span>Xuất dữ liệu</span></div>
+                <div class="ms-sett-row"><div class="ms-si" style="background:rgba(239,83,80,.1)">🗑️</div><span class="red-text">Xóa lịch sử</span></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 STATES -->
+<section class="states" id="states" aria-labelledby="states-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">6 TRẠNG THÁI</div>
+    <h2 class="section-title" id="states-h">App phân loại bạn<br>vào đúng 1 trong 6 trạng thái</h2>
+
+    <div class="states-grid">
+      <article class="state-card animate-scroll" style="--sc:#EF5350;--sd:0s">
+        <div class="state-emoji" aria-label="Biểu tượng kiệt sức"></div>
+        <div class="state-name">Kiệt sức hoàn toàn</div>
+        <div class="state-score">0–1.5 / 5</div>
+        <blockquote class="state-advice">"Nghỉ ngay, không bàn cãi. Ngủ 20 phút hoặc ra ngoài hít thở."</blockquote>
+      </article>
+      <article class="state-card animate-scroll" style="--sc:#FFA726;--sd:0.1s">
+        <div class="state-emoji" aria-label="Biểu tượng mệt mỏi"></div>
+        <div class="state-name">Mệt mỏi, cần nghỉ</div>
+        <div class="state-score">1.5–2.5 / 5</div>
+        <blockquote class="state-advice">"Nghỉ 15 phút rồi thử lại. Đừng ép bản thân làm việc nặng."</blockquote>
+      </article>
+      <article class="state-card animate-scroll" style="--sc:#FFD600;--sd:0.2s">
+        <div class="state-emoji" aria-label="Biểu tượng lười"></div>
+        <div class="state-name">Lười có deadline</div>
+        <div class="state-score">2.5–3.2 / 5</div>
+        <blockquote class="state-advice">"Làm 5 phút đi, sau đó đánh giá lại. Deadline thật thì không lười được đâu."</blockquote>
+      </article>
+      <article class="state-card animate-scroll" style="--sc:#06D6A0;--sd:0.3s">
+        <div class="state-emoji" aria-label="Biểu tượng sẵn sàng"></div>
+        <div class="state-name">Tỉnh táo, sẵn sàng</div>
+        <div class="state-score">3.2–4.2 / 5</div>
+        <blockquote class="state-advice">"Bắt tay vào task quan trọng nhất ngay. Đây là lúc tốt nhất."</blockquote>
+      </article>
+      <article class="state-card animate-scroll" style="--sc:#29B6F6;--sd:0.4s">
+        <div class="state-emoji" aria-label="Biểu tượng tập trung"></div>
+        <div class="state-name">Tập trung cao độ</div>
+        <div class="state-score">4.2–4.8 / 5</div>
+        <blockquote class="state-advice">"Deep work mode. Tắt hết thông báo và tận dụng trạng thái này."</blockquote>
+      </article>
+      <article class="state-card animate-scroll" style="--sc:#9C76FF;--sd:0.5s">
+        <div class="state-emoji" aria-label="Biểu tượng mất động lực"></div>
+        <div class="state-name">Mất động lực</div>
+        <div class="state-score">3.2–4.2 / 5</div>
+        <blockquote class="state-advice">"Năng lượng ổn nhưng thiếu mục tiêu. Nhớ lại lý do bạn bắt đầu."</blockquote>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENS -->
+<section class="screens" id="screens" aria-labelledby="screens-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">THIẾT KẾ</div>
+    <h2 class="section-title" id="screens-h">10 màn hình<br>được thiết kế chi tiết</h2>
+    <p class="section-sub">Dark mode native · Plus Jakarta Sans · 390×844px iPhone 14 standard · Glassmorphism nhẹ</p>
+  </div>
+
+  <div class="screens-scroll" role="region" aria-label="Cuộn ngang xem màn hình">
+    <div class="screens-track">
+      <div class="screen-pill s-splash">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-splash.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Splash</div>
+      </div>
+
+      <div class="screen-pill s-onboard">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-onboarding.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Onboarding</div>
+      </div>
+
+      <div class="screen-pill s-home">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-home.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Home</div>
+      </div>
+      
+      <div class="screen-pill s-quiz">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-quiz.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Quiz</div>
+      </div>
+
+      <div class="screen-pill s-loading">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-loading.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Loading</div>
+      </div>
+
+      <div class="screen-pill s-result">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-result.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Kết quả</div>
+      </div>
+
+      <div class="screen-pill s-history">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-history.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Lịch sử</div>
+      </div>
+
+      <div class="screen-pill s-notif">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-notif.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Thông báo</div>
+      </div>
+
+      <div class="screen-pill s-settings">
+        <div class="sp-phone">
+          <div class="sp-notch"></div>
+          <img src="images/screen-settings.PNG" alt="Splash screen" class="sp-img">
+        </div>
+        <div class="sp-label">Cài đặt</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screens-cta">
+    <a href="https://www.figma.com/design/s4eJpHFbCJIEIy4n81feyz/energy-app?node-id=13605-13323&t=JeQHbb51WVs3npWu-1" target="_blank" rel="noopener noreferrer" class="cta-secondary">Xem đầy đủ trong Figma →</a>
+    <a href="https://www.behance.net/gallery/247647925/Energy-App" target="_blank" rel="noopener noreferrer" class="cta-secondary">Xem case study Behance →</a>
+  </div>
+</section>
+
+<!-- USERS -->
+<section class="users" id="users" aria-labelledby="users-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">ĐỐI TƯỢNG</div>
+    <h2 class="section-title" id="users-h">Ai nên dùng<br>app này?</h2>
+
+    <div class="users-grid">
+      <article class="user-card animate-scroll">
+        <div class="user-avatar" aria-hidden="true">🎓</div>
+        <div class="user-info">
+          <h4>Sinh viên ĐH (18–24)</h4>
+          <p>Đặc biệt ngành CNTT, kỹ thuật. Thường xuyên thức khuya, áp lực học tập cao, khó phân biệt burnout và procrastination trong mùa thi.</p>
+        </div>
+        <ul class="user-tags" aria-label="Đặc điểm nhóm người dùng">
+          <li>All-nighter</li><li>Deadline chồng chất</li><li>Stress học thi</li>
+        </ul>
+      </article>
+      <article class="user-card animate-scroll" style="--sd:0.15s">
+        <div class="user-avatar" aria-hidden="true">💼</div>
+        <div class="user-info">
+          <h4>Freelancer &amp; người đi làm (25–34)</h4>
+          <p>Quản lý deadline từ nhiều dự án, không có ranh giới rõ giữa giờ làm và giờ nghỉ. Cần công cụ khách quan để tự đánh giá trạng thái.</p>
+        </div>
+        <ul class="user-tags" aria-label="Đặc điểm nhóm người dùng">
+          <li>3–4 deadline/tuần</li><li>Remote work</li><li>Self-managed</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN SYSTEM -->
+<section class="ds-preview" id="ds" aria-labelledby="ds-h">
+  <div class="container">
+    <div class="section-label" aria-hidden="true">DESIGN SYSTEM</div>
+    <h2 class="section-title" id="ds-h">Ngôn ngữ thiết kế<br>nhất quán xuyên suốt</h2>
+
+    <div class="ds-grid">
+      <div class="ds-card animate-scroll">
+        <div class="ds-card-title">Typography</div>
+        <div class="ds-font-demo">
+          <div class="df-row" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:22px;color:#F0F0FF">Bận hay Lười?</div>
+          <div class="df-row" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:16px;color:#D0D0E8">Tỉnh táo, sẵn sàng</div>
+          <div class="df-row" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:13px;color:#888899">Năng lượng của bạn đang ở mức tốt</div>
+          <div class="df-row" style="font-family:'DM Mono',monospace;font-weight:500;font-size:11px;color:#9c76ff">4.2 / 5.0 · 82% · v2.0.0</div>
+        </div>
+        <div class="ds-meta">Plus Jakarta Sans + DM Mono</div>
+      </div>
+      <div class="ds-card animate-scroll" style="--sd:0.1s">
+        <div class="ds-card-title">Color Palette</div>
+        <div class="ds-colors">
+          <div class="dc-swatch" style="background:#0E0E16" title="App Background"></div>
+          <div class="dc-swatch" style="background:#111118" title="Surface 01"></div>
+          <div class="dc-swatch" style="background:#6C47FF" title="Purple Primary"></div>
+          <div class="dc-swatch" style="background:#06D6A0" title="Teal Accent"></div>
+          <div class="dc-swatch" style="background:#EF5350" title="State: Kiệt sức"></div>
+          <div class="dc-swatch" style="background:#FFA726" title="State: Mệt mỏi"></div>
+          <div class="dc-swatch" style="background:#FFD600" title="State: Lười"></div>
+          <div class="dc-swatch" style="background:#29B6F6" title="State: Tập trung"></div>
+          <div class="dc-swatch" style="background:#9C76FF" title="State: Mất ĐL"></div>
+          <div class="dc-swatch" style="background:#252535" title="Border Default"></div>
+        </div>
+        <div class="ds-meta">10 màu token · Figma Variables</div>
+      </div>
+      <div class="ds-card animate-scroll" style="--sd:0.2s">
+        <div class="ds-card-title">Spacing Scale</div>
+        <div class="ds-spacing">
+          <div class="dsp-row"><div class="dsp-block" style="width:4px;background:#6C47FF"></div><span>4px</span></div>
+          <div class="dsp-row"><div class="dsp-block" style="width:8px;background:#6C47FF"></div><span>8px</span></div>
+          <div class="dsp-row"><div class="dsp-block" style="width:12px;background:#6C47FF"></div><span>12px</span></div>
+          <div class="dsp-row"><div class="dsp-block" style="width:16px;background:#6C47FF"></div><span>16px</span></div>
+          <div class="dsp-row"><div class="dsp-block" style="width:24px;background:#6C47FF"></div><span>24px</span></div>
+          <div class="dsp-row"><div class="dsp-block" style="width:32px;background:#6C47FF"></div><span>32px</span></div>
+        </div>
+        <div class="ds-meta">8pt grid · Auto Layout</div>
+      </div>
+      <div class="ds-card animate-scroll" style="--sd:0.3s">
+        <div class="ds-card-title">Border Radius</div>
+        <div class="ds-radius">
+          <div class="dr-item"><div class="dr-box" style="border-radius:4px"></div><span>4px XS</span></div>
+          <div class="dr-item"><div class="dr-box" style="border-radius:8px"></div><span>8px SM</span></div>
+          <div class="dr-item"><div class="dr-box" style="border-radius:12px"></div><span>12px MD</span></div>
+          <div class="dr-item"><div class="dr-box" style="border-radius:16px"></div><span>16px LG</span></div>
+          <div class="dr-item"><div class="dr-box" style="border-radius:99px"></div><span>99px Pill</span></div>
+        </div>
+        <div class="ds-meta">5 radius token</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" aria-labelledby="cta-h">
+  <div class="container">
+    <div class="fc-orb fc-orb1" aria-hidden="true"></div>
+    <div class="fc-orb fc-orb2" aria-hidden="true"></div>
+    <h2 class="fc-title animate-scroll" id="cta-h">Xem đầy đủ<br>thiết kế tại đây</h2>
+    <p class="fc-sub animate-scroll" style="--sd:0.1s">Toàn bộ 10 màn hình, design system, component library và case study đều được public.</p>
+    <div class="fc-buttons animate-scroll" style="--sd:0.2s">
+      <a href="https://www.figma.com/design/s4eJpHFbCJIEIy4n81feyz/energy-app?node-id=13605-13323&t=JeQHbb51WVs3npWu-1" target="_blank" rel="noopener noreferrer" class="fc-btn figma-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2" y="2" width="7" height="7" rx="2" fill="white" fill-opacity=".9"/><rect x="11" y="2" width="7" height="7" rx="3.5" fill="white" fill-opacity=".9"/><rect x="2" y="11" width="7" height="7" rx="3.5" fill="white" fill-opacity=".9"/><rect x="11" y="11" width="7" height="7" rx="2" fill="white" fill-opacity=".9"/></svg>
+        Mở Figma File
+        <span class="btn-sub">Component library · 10 screens · Design system</span>
+      </a>
+      <a href="https://www.behance.net/gallery/247647925/Energy-App" target="_blank" rel="noopener noreferrer" class="fc-btn behance-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h6c1.66 0 3 1.12 3 2.5C12 8.5 11.42 9.3 10.5 9.75 11.83 10.17 13 11.17 13 12.5c0 1.93-1.57 3-3.5 3H3V5zm2.5 3.75H8.5c.69 0 1.25-.56 1.25-1.25S9.19 6.25 8.5 6.25H5.5v2.5zm0 4.5H9c.83 0 1.5-.67 1.5-1.5S9.83 10.25 9 10.25H5.5v3z" fill="currentColor"/><path d="M13 8.5h6M14.5 5.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16.5" cy="12.5" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 12.5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Xem Case Study
+        <span class="btn-sub">7-section Behance · Process · Outcomes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span aria-hidden="true">🤔</span>
+        <span class="footer-name">Bận hay Lười?</span>
+        <span class="footer-ver">v2.0.0</span>
+      </div>
+      <p class="footer-info">
+        Đồ án môn Mobile App Development · Được thiết kế cho sinh viên và người trẻ đi làm · React Native / Flutter
+      </p>
+      <nav class="footer-links" aria-label="Liên kết ngoài">
+        <a href="https://www.figma.com/design/s4eJpHFbCJIEIy4n81feyz/energy-app?node-id=13605-13323&t=JeQHbb51WVs3npWu-1" target="_blank" rel="noopener noreferrer">Figma</a>
+        <a href="https://www.behance.net/gallery/247647925/Energy-App" target="_blank" rel="noopener noreferrer">Behance</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── NAV scroll effect ───
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// ─── Hamburger menu ───
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+  hamburger.classList.toggle('active', isOpen);
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    hamburger.classList.remove('active');
+  });
+});
+
+// ─── Scroll animations ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.animate-scroll').forEach(el => observer.observe(el));
+
+// ─── Feature phone switcher ───
+const featureItems = document.querySelectorAll('.feature-item');
+const featureScreens = document.querySelectorAll('[id^="fs"]');
+
+function switchScreen(idx) {
+  featureItems.forEach((fi, i) => {
+    fi.classList.toggle('active', i === idx);
+    fi.setAttribute('aria-pressed', String(i === idx));
+  });
+  featureScreens.forEach(fs => { fs.classList.remove('active'); fs.style.display = 'none'; });
+  const target = document.getElementById('fs' + idx);
+  if (target) { target.style.display = 'flex'; target.classList.add('active'); }
+}
+
+featureItems.forEach((item, idx) => {
+  item.addEventListener('click', () => switchScreen(idx));
+  item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); switchScreen(idx); } });
+});
+switchScreen(0);
+
+// ─── Smooth scroll for anchors ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 16, behavior: 'smooth' });
+  });
+});
+
+// ─── Screens drag scroll ───
+const screensScroll = document.querySelector('.screens-scroll');
+if (screensScroll) {
+  let isDown = false, startX, scrollLeft;
+  screensScroll.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - screensScroll.offsetLeft; scrollLeft = screensScroll.scrollLeft; screensScroll.style.cursor = 'grabbing'; });
+  screensScroll.addEventListener('mouseleave', () => { isDown = false; screensScroll.style.cursor = ''; });
+  screensScroll.addEventListener('mouseup', () => { isDown = false; screensScroll.style.cursor = ''; });
+  screensScroll.addEventListener('mousemove', e => { if (!isDown) return; e.preventDefault(); screensScroll.scrollLeft = scrollLeft - (e.pageX - screensScroll.offsetLeft - startX) * 1.5; });
+}
+</script>
+</body>
+</html>
